@@ -4,135 +4,307 @@ title: About
 permalink: /about/
 comments: true
 ---
-
-## As a conversation Starter
-
-Here are some places I have lived.
-
-<comment>
-Flags are made using Wikipedia images
-</comment>
-
-<style>
-    /* Style looks pretty compact, 
-       - grid-container and grid-item are referenced the code 
-    */
-    .grid-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Dynamic columns */
-        gap: 10px;
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #2b2b2b; /* dark-ish gray */
+      color: #e0e0e0; /* light gray */
+      line-height: 1.6;
     }
-    .grid-item {
-        text-align: center;
+    header {
+      text-align: center;
+      padding: 2rem;
+      background-color: black;
+      color: #ffbf00ff; /* yellow accent */
     }
-    .grid-item img {
-        width: 100%;
-        height: 100px; /* Fixed height for uniformity */
-        object-fit: contain; /* Ensure the image fits within the fixed height */
+    section {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1.5rem;
+      background-color: #3a3a3a; /* lighter gray */
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.4);
     }
-    .grid-item p {
-        margin: 5px 0; /* Add some margin for spacing */
+    h2 {
+      color: #ffbf00ff;
+      border-bottom: 2px solid #ffbf00ff;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
     }
-
-    .image-gallery {
-        display: flex;
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        gap: 10px;
-        }
-
-    .image-gallery img {
-        max-height: 150px;
-        object-fit: cover;
-        border-radius: 5px;
+    ul {
+      list-style-type: none;
+      padding-left: 0;
     }
-</style>
-
-<!-- This grid_container class is used by CSS styling and the id is used by JavaScript connection -->
-<div class="grid-container" id="grid_container">
-    <!-- content will be added here by JavaScript -->
-</div>
-
-<script>
-    // 1. Make a connection to the HTML container defined in the HTML div
-    var container = document.getElementById("grid_container"); // This container connects to the HTML div
-
-    // 2. Define a JavaScript object for our http source and our data rows for the Living in the World grid
-    var http_source = "https://upload.wikimedia.org/wikipedia/commons/";
-    var living_in_the_world = [
-        {"flag": "0/01/Flag_of_California.svg", "greeting": "Hey", "description": "California - forever"},
-        {"flag": "b/b9/Flag_of_Oregon.svg", "greeting": "Hi", "description": "Oregon - 9 years"},
-        {"flag": "b/be/Flag_of_England.svg", "greeting": "Alright mate", "description": "England - 2 years"},
-        {"flag": "e/ef/Flag_of_Hawaii.svg", "greeting": "Aloha", "description": "Hawaii - 2 years"},
-    ];
-
-    // 3a. Consider how to update style count for size of container
-    // The grid-template-columns has been defined as dynamic with auto-fill and minmax
-
-    // 3b. Build grid items inside of our container for each row of data
-    for (const location of living_in_the_world) {
-        // Create a "div" with "class grid-item" for each row
-        var gridItem = document.createElement("div");
-        gridItem.className = "grid-item";  // This class name connects the gridItem to the CSS style elements
-        // Add "img" HTML tag for the flag
-        var img = document.createElement("img");
-        img.src = http_source + location.flag; // concatenate the source and flag
-        img.alt = location.flag + " Flag"; // add alt text for accessibility
-
-        // Add "p" HTML tag for the description
-        var description = document.createElement("p");
-        description.textContent = location.description; // extract the description
-
-        // Add "p" HTML tag for the greeting
-        var greeting = document.createElement("p");
-        greeting.textContent = location.greeting;  // extract the greeting
-
-        // Append img and p HTML tags to the grid item DIV
-        gridItem.appendChild(img);
-        gridItem.appendChild(description);
-        gridItem.appendChild(greeting);
-
-        // Append the grid item DIV to the container DIV
-        container.appendChild(gridItem);
+    ul li {
+      margin: 0.5rem 0;
+      display: flex;
+      align-items: center;
     }
-</script>
+    ul li img {
+      width: 75px;
+      height: 75px;
+      margin-right: 0.5rem;
+      border-radius: 6px;
+    }
+    .flags img {
+      width: 100px;
+      height: auto;
+      margin-right: 1rem;
+      border-radius: 6px;
+    }
+    .interests img {
+      width: 75px;
+      height: 75px;
+      margin-right: 0.5rem;
+      border-radius: 6px;
+    }
+    .interest-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 2rem;
+      background-color: #3a3a3a;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    th, td {
+      border: 1px solid #555;
+      padding: 0.75rem;
+      text-align: center;
+    }
+    th {
+      background-color: black;
+      color: #ffbf00ff;
+    }
+    tr:nth-child(even) {
+      background-color: #2f2f2f;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>About Me</h1>
+  </header>
 
-### Journey through Life
+  <section>
+    <h2>Where I'm From</h2>
+    <div class="flags">
+      <img src="https://flagcdn.com/w320/hr.png" alt="Croatia Flag">
+      <img src="https://flagcdn.com/w320/ua.png" alt="Ukraine Flag">
+    </div>
+  </section>
 
-Here is what I did at those places
+  <section>
+    <h2>My Interests</h2>
+    <div class="interests">
+    <div class="interest-item">
+        <img src="https://www.researchgate.net/publication/286444224/figure/fig4/AS:669074505859102@1536531201846/a-Kinematics-and-b-free-body-diagram-of-a-stud-to-plate-contact-element.jpg" alt="Physics">
+        <span>Learning <strong>Physics</strong></span>
+      </div>
+      <div class="interest-item">
+        <img src="https://i.ytimg.com/vi/oKCf9q4FFsA/hq720.jpg?sqp=-oaymwE7CK4FEIIDSFryq4qpAy0IARUAAAAAGAElAADIQj0AgKJD8AEB-AHOBYAC0AWKAgwIABABGGUgWShQMA8=&rs=AOn4CLByq753Cnp_NH7fQkveHbfvTVsKuw" alt="Deadlock">
+        <span>Playing <strong>Video Games</strong></span>
+      </div>
+      <div class="interest-item">
+        <img src="https://arc-anglerfish-arc2-prod-bostonglobe.s3.amazonaws.com/public/LYW65MC6TUI6NLVDPHC4BZI474.jpg" alt="Swimming">
+        <span>Sucking at <strong>Swimming</strong></span>
+      </div>
+      <div class="interest-item">
+        <img src="https://yt3.googleusercontent.com/N96L8eWn_K6gsBFcNH7D54ZRBDUU8_yUU8l-74ACbP08JSELX1SCVFZWVEYP6KWREyqDD6VuUBg=s900-c-k-c0x00ffffff-no-rj" alt="Music Icon">
+        <span>Listening to <strong>Music</strong></span>
+      </div>
+    </div>
+  </section>
 
-- 🏫 Lots of Elementary Schools in Tucson, LA, Honolulu, and Glendale (CA)
-- 🏫 Middle and High School in Glendale (CA), Hoover High graduated '77
-- 🎓 Glendale CA Community College, UCLA Extension, LA Wilshire Computer Tech School '77 to '79
-- ⛪ England, London Missionary for Church of Jesus Christ of Latter-day Saints '79 to '81
-- 💼 Culver City, Glendale CA founder at Ashton-Tate, original PC's dBase 2 and 3 '82 to '87
-- 🎓 Eugene Oregon Undergraduate CompSci Degree at University of Oregon (Go Ducks!) '89 to '91
-- 💼 Eugene Oregon, founder and owner @ Microniche `88, Point Control CAD CAM developer '91 to '96
-- 🏢 San Diego CA Qualcomm, Satellite Comm and 1st Mobile OS (BREW) '96 to '19
-- 👨‍🏫 San Diego CA Teacher of Computer Science @ Del Norte High School San Diego '19 to present
+  <section>
+    <h2>My Favorite Things</h2>
+    <ul>
+      <li><img src="https://media-cdn.tripadvisor.com/media/photo-s/1b/91/c6/e4/wagyu-sushi-roll.jpg " alt="Food">Good food</li>
+      <li><img src="https://i.pinimg.com/474x/08/22/2f/08222fc721627ac3df8f7e25cb24f577.jpg" alt="Sleepy Time">Sleeping in the Rain</li>
+      <li><img src="https://miro.medium.com/1*VqdHTuABy3-IllUR1di42A.jpeg" alt="Code code code">Creative projects</li>
+      <li><img src="https://cdn.mos.cms.futurecdn.net/otuvKvH9cX2HJcsMi3dReF.jpg" alt="Gay Ming">Hanging out with Friends</li>
+    </ul>
+  </section>
 
-### Culture, Family, and Fun
+  <h4 id="-evaluation-matrix">Self-Evaluation Matrix</h4>
 
-Everything for me, as for many others, revolves around family and faith.
-
-- My mother told me that I was Danish, English. and Irish, here is my researched [family tree]({{site.baseurl}}/images/about/familytree.png)
-- My family is pretty big as I have been married twice, my 1st wife passed away.  We have had 5 kids, 4 adopted by me, 1 biological.  Plus, there are three grandkids.  My name to my grandkids is Abuilito.
-- The gallery of pics has some of my family, fun, culture and faith memories.
-
-<comment>
-Gallery of Pics, scroll to the right for more ...
-</comment>
-<div class="image-gallery">
-  <img src="{{site.baseurl}}/images/about/missionary.jpg" alt="Image 1">
-  <img src="{{site.baseurl}}/images/about/john_tamara.jpg" alt="Image 2">
-  <img src="{{site.baseurl}}/images/about/tamara_fam.jpg" alt="Image 3">
-  <img src="{{site.baseurl}}/images/about/surf.jpg" alt="Image 4">
-  <img src="{{site.baseurl}}/images/about/john_lora.jpg" alt="Image 5">
-  <img src="{{site.baseurl}}/images/about/lora_fam.jpg" alt="Image 6">
-  <img src="{{site.baseurl}}/images/about/lora_fam2.jpg" alt="Image 7">
-  <img src="{{site.baseurl}}/images/about/pj_party.jpg" alt="Image 8">
-  <img src="{{site.baseurl}}/images/about/trent_family.png" alt="Image 9">
-  <img src="{{site.baseurl}}/images/about/claire.jpg" alt="Image 10">
-  <img src="{{site.baseurl}}/images/about/grandkids.jpg" alt="Image 11">
-  <img src="{{site.baseurl}}/images/about/farm.jpg" alt="Image 12">
-</div>
+  <table>
+    <thead>
+      <tr>
+        <th>Skill</th>
+        <th>Mastered (Y/N)</th>
+        <th>Self Rank (1-5)</th>
+        <th>Peer Rank (1-5)</th>
+        <th>Teacher Rank (1-5)</th>
+        <th>Average</th>
+        <th>Notes/Evidence</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>🎯 Core Behaviors</strong></td>
+        <td> </td>
+        <td>5</td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+      </tr>
+      <tr>
+        <td>Attendance</td>
+        <td>[Y]</td>
+        <td>5</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0.0</td>
+        <td> </td>
+      </tr>
+      <tr>
+        <td>Work Habits</td>
+        <td>[Y]</td>
+        <td>5</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0.0</td>
+        <td>I am consistent with being a prominent worker in my groups and I help keep my team on track</td>
+      </tr>
+      <tr>
+        <td>Behavior</td>
+        <td>[Y]</td>
+        <td>5</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0.0</td>
+        <td>Focused and attentive in class</td>
+      </tr>
+      <tr>
+        <td>Timeliness</td>
+        <td>[Y]</td>
+        <td>5</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0.0</td>
+        <td>I make it to class on time and do not turn in assignments late</td>
+      </tr>
+      <tr>
+        <td><strong>💻 Technical Skills</strong></td>
+        <td> </td>
+        <td>4</td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+      </tr>
+      <tr>
+        <td>Tech/Cyber Sense</td>
+        <td>[N]</td>
+        <td>3</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0.0</td>
+        <td>Still growing in terms of syntax knowledge</td>
+      </tr>
+      <tr>
+        <td>Tech/Cyber Talk</td>
+        <td>[N]</td>
+        <td>4</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0.0</td>
+        <td>Getting better at presenting technical work</td>
+      </tr>
+      <tr>
+        <td>Tech Growth</td>
+        <td>[Y]</td>
+        <td>5</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0.0</td>
+        <td>Learning every day</td>
+      </tr>
+      <tr>
+        <td><strong>🤝 Collaboration</strong></td>
+        <td> </td>
+        <td>5</td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+      </tr>
+      <tr>
+        <td>Advocacy</td>
+        <td>[Y]</td>
+        <td>5</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0.0</td>
+        <td>I am a good group worker and like to movd team forward</td>
+      </tr>
+      <tr>
+        <td>Communication &amp; Collab</td>
+        <td>[Y]</td>
+        <td>5</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0.0</td>
+        <td>I thrive in leadership roles</td>
+      </tr>
+      <tr>
+        <td><strong>🎨 Professional Skills</strong></td>
+        <td> </td>
+        <td>4.8</td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+      </tr>
+      <tr>
+        <td>Integrity</td>
+        <td>[Y]</td>
+        <td>5</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0.0</td>
+        <td> </td>
+      </tr>
+      <tr>
+        <td>Organization</td>
+        <td>[N]</td>
+        <td>4</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0.0</td>
+        <td>Still adapting to new tools</td>
+      </tr>
+      <tr>
+        <td><strong>📈 TOTALS</strong></td>
+        <td> </td>
+        <td><strong>75.8</strong></td>
+        <td><strong>0</strong></td>
+        <td><strong>0</strong></td>
+        <td><strong>0.0</strong></td>
+        <td> </td>
+      </tr>
+      <tr>
+        <td><strong>🎯 AVERAGE SCORE</strong></td>
+        <td> </td>
+        <td><strong>0.0</strong></td>
+        <td><strong>0.0</strong></td>
+        <td><strong>0.0</strong></td>
+        <td><strong>0.0</strong></td>
+        <td> </td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>

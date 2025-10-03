@@ -23,7 +23,7 @@ header_pages:
 collections:
   homework:
     output: true
-    permalink: /csp/:path/
+    permalink: /:collection/:path/
 defaults:
   - scope:
       path: "homework"

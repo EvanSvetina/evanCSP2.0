@@ -20,3 +20,13 @@ header_pages:
   - navigation/search.md
   - navigation/about.md
   - navigation/logintoolkit.md
+collections:
+  homework:
+    output: true
+    permalink: /csp/:path/
+defaults:
+  - scope:
+      path: "homework"
+      type: "homework"
+    values:
+      layout: "post"

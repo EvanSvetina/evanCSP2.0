@@ -50,6 +50,10 @@ if (lives === 0) {
 }
 ```
 
+
+    <IPython.core.display.Javascript object>
+
+
 ## Challenge 3: High Score Boost
 If the player’s score reaches 10 or more, give them a bonus of +5 points.
 
@@ -64,9 +68,26 @@ if (score >= 10) {
 } else {
     console.log("Try again!");
 }
+let hit = true
+if (hit === true) {
+    score += 2;
+    console.log("Hit! Score increased to " + score);
+} else {
+    console.log("Miss! Score remains " + score);
+}
+if (score >= 10) {
+    score += 5;
+    console.log("New High Score! Bonus awarded.");
+} else {
+    console.log("Try again!");
+}
 
 console.log("Final score: " + score);
 ```
+
+
+    <IPython.core.display.Javascript object>
+
 
 ## Challenge 4: Bonus Mole Condition
 A golden mole should only give a bonus if both goldenMole and hit are true. Fix the condition.
@@ -77,9 +98,13 @@ A golden mole should only give a bonus if both goldenMole and hit are true. Fix 
 let goldenMole = true;   // Special mole appears
 let hit = true;          // Change to true if the mole is hit
 
-if (goldenMole = true && hit = true) { // <-- wrong condition
+if (goldenMole == true && hit == true) { 
     console.log("Bonus!");
 } else {
     console.log("No bonus.");
 }
 ```
+
+
+    <IPython.core.display.Javascript object>
+

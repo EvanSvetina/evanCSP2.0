@@ -23,9 +23,6 @@ console.log(peppaName + " is at level " + level + " with a score of " + score + 
 score = score + 10;
 level = level * 2;
 console.log(peppaName + " is at level " + level + " with a score of " + score + ".");
-// Write your code here
-// Create variables for Peppa's name, score, and level
-// Use operators to update score and level
 
 ```
 

@@ -25,6 +25,7 @@ let library = [
     { title: "To Kill a Mockingbird", author: "Harper Lee", checkedOut: true },
     { title: "The Great Gatsby", author: "F. Scott Fitzgerald", checkedOut: false }
 ];
+
 // Function to display all books
 function displayLibrary(lib) {
     console.log("All books in the library:");
@@ -35,9 +36,9 @@ function displayLibrary(lib) {
 
 // Function to add a new book (students: implement prompt and push logic)
 function addBook(lib) {
-    const title = prompt("Enter book title:");
-    const author = prompt("Enter book author:");
-    const checkedOutInput = prompt("Is the book checked out? (yes/no):");
+    const title = "The Greater Gatsby"; 
+    const author = "John Finklebottom";
+    const checkedOutInput = "no";
     const checkedOut = checkedOutInput.toLowerCase() === "yes";
     lib.push({ title, author, checkedOut });
     console.log(`Book "${title}" added.`);
@@ -57,8 +58,6 @@ function findBook(lib, searchTitle) {
 function updateBook(lib, searchTitle) {
     const book = lib.find(book => book.title.toLowerCase() === searchTitle.toLowerCase());
     if (book) {
-        const checkedOutInput = prompt("Update checked out status (yes/no):");
-        book.checkedOut = checkedOutInput.toLowerCase() === "yes";
         console.log(`Book "${searchTitle}" updated:`, book);
     } else {
         console.log(`Book titled "${searchTitle}" not found.`);

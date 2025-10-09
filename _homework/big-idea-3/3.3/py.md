@@ -1,5 +1,5 @@
 ---
-title: "Conditionals in Javascript and Python - Hacks"
+title: "Conditionals in Python - Hacks"
 description: "Apply your skills to basic algorithmic design with conditionals."
 layout: post
 permalink: /homework/big-idea-3/3.6/py

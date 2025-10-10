@@ -6,7 +6,8 @@ title: Remakers - 3.13 Developing Procedures JS Hacks
 description: "Apply your skills to basic procedure development in Javascript."
 permalink: /homework/big-idea-3/3.13/js
 author: Krishna Visvanath, Sloane Sommers
----### Q1 (Easy)
+---
+### Q1 (Easy)
 Which of these procedures is named wrong, provide a **short** explanation of justification
 
 ```python

@@ -2,7 +2,7 @@
 layout: post
 title: Escape Room - Strings Homework
 description: Quick practice with strings in Python.
-permalink: /homework/big-idea-3/3.4/js
+permalink: /homework/big-idea-3/3.4/py
 Author: Cyrus S, Rishabh J.
 ---
 # AP CSP 3.4 — Python Strings: Free-Response Quiz

@@ -131,9 +131,9 @@ Author: Evan S.
         <p><strong>Q: What insights did you gain from your analytics review?</strong></p>
         <div class="answer">
             Analytics:
-            - 430 total contributions in the last year
-            - 4 pull requests
-            - 17 issues created
+            - 431 total contributions in the last year, 43 commits for this project<br>
+            - 13 total prs, 4 for this project pull requests<br>
+            - 57 issues created for this project<br>
             I think i contributed quite significantly to oour overall project, which is shown not just by the analytics but also my involvement with other scrum masters and planning.
         </div>
         <h3>7. MCQ Performance</h3>

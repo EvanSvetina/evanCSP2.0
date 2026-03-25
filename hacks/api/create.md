@@ -1,10 +1,10 @@
 ---
 layout: post
 title: API create
-description: api createmaxxing hehehehfegvsheyuifbjk
 permalink: /api/create
-author: Evan S.
+show_reading_time: false
 ---
+
 <h3>Add a New User to InfoDB</h3>
 <form id="addUserForm">
   <label for="firstName">First Name:</label>

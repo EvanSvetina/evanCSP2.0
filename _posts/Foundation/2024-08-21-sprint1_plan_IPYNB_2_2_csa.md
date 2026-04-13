@@ -9,4 +9,4 @@ title: Sprint 1 - Objectives
 type: issues
 ---
 
-{% include_relative 2024-08-21-sprint1_plan_IPYNB_2_ 2_content.md %}
+{% include_relative 2024-08-21-sprint1_plan_IPYNB_2_2_content.md %}
